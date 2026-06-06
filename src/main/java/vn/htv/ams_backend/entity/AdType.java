@@ -1,0 +1,66 @@
+package vn.htv.ams_backend.entity;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "AdTypes") // Tên bảng theo ảnh
+public class AdType {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "AdTypeID")
+    private Integer adTypeId;
+
+    @Column(name = "Code")
+    private String code;
+
+    @Column(name = "Name")
+    private String name;
+
+    @Column(name = "Description")
+    private String description;
+
+    @Column(name = "UserCreated")
+    private Integer userCreated;
+
+    @Column(name = "UserUpdated")
+    private Integer userUpdated;
+
+    @Column(name = "DateCreated")
+    private LocalDateTime dateCreated;
+
+    @Column(name = "DateUpdated")
+    private LocalDateTime dateUpdated;
+
+    @Column(name = "ObjID")
+    private String objId;
+
+    // ================= GETTER & SETTER =================
+    public Integer getAdTypeId() { return adTypeId; }
+    public void setAdTypeId(Integer adTypeId) { this.adTypeId = adTypeId; }
+
+    public String getCode() { return code; }
+    public void setCode(String code) { this.code = code; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
+    public Integer getUserCreated() { return userCreated; }
+    public void setUserCreated(Integer userCreated) { this.userCreated = userCreated; }
+
+    public Integer getUserUpdated() { return userUpdated; }
+    public void setUserUpdated(Integer userUpdated) { this.userUpdated = userUpdated; }
+
+    public LocalDateTime getDateCreated() { return dateCreated; }
+    public void setDateCreated(LocalDateTime dateCreated) { this.dateCreated = dateCreated; }
+
+    public LocalDateTime getDateUpdated() { return dateUpdated; }
+    public void setDateUpdated(LocalDateTime dateUpdated) { this.dateUpdated = dateUpdated; }
+
+    public String getObjId() { return objId; }
+    public void setObjId(String objId) { this.objId = objId; }
+}
